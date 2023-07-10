@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+greetings = Comment.create([{text: 'Hello world'},
+                            {text: 'Hola mundo'},
+                            {text: 'Bonjour le monde'},
+                            {text: 'Bonjour le monde'},
+                            {text: 'Ciao mondo'}
+                            ]);
