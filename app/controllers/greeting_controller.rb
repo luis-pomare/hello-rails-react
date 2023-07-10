@@ -1,5 +1,5 @@
 class GreetingController < ApplicationController
-  def index
+  def greetings_endpoint
     greetings = Comment.all
     @greeting = greetings.sample
     respond_to do |format|
