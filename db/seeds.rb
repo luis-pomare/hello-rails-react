@@ -9,6 +9,6 @@
 greetings = Comment.create([{text: 'Hello world'},
                             {text: 'Hola mundo'},
                             {text: 'Bonjour le monde'},
-                            {text: 'Bonjour le monde'},
+                            {text: 'Hallo Welt'},
                             {text: 'Ciao mondo'}
                             ]);
