@@ -2,11 +2,28 @@
 import "@hotwired/turbo-rails"
 import "./controllers"
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 
 function App() {
-  return (<h1>Hello world!</h1>);
+  const [greeting, setGreeting] = useState([]);
+
+  useEffect(() => {
+    fetch('/greeting/api')
+      .then(response => response.json())
+      .then(data => {
+        setGreeting(data);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }, []);
+
+  return (
+    <h1>
+      {greeting.text}
+    </h1>
+  );
 }
 
 ReactDOM.render(
