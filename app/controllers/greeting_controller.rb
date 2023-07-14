@@ -1,3 +1,4 @@
+# ROR class
 class GreetingController < ApplicationController
   def greetings_endpoint
     greetings = Comment.all
