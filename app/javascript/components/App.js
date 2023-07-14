@@ -1,4 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { Provider } from 'react-redux';
+import store from '../store';
+
+import ExampleComponent from './ExampleComponent';
 
 function App() {
   const [greeting, setGreeting] = useState([]);
@@ -15,9 +19,12 @@ function App() {
   }, []);
 
   return (
-    <h1>
-      {greeting.text}
-    </h1>
+    <Provider store={store}>
+      <ExampleComponent />
+      <h1>
+        {greeting.text}
+      </h1>
+    </Provider>
   );
 }
 
