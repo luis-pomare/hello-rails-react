@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect, useDispatch, useSelector } from 'react-redux';
 import { setGreeting } from '../actions/greetingActions';
-import ExampleComponent from './ExampleComponent';
 
 function App() {
   const greeting = useSelector(state => state.greeting.text);
@@ -19,10 +18,9 @@ function App() {
   }, [dispatch]);
 
   return (
-    <div>
-      <ExampleComponent greeting={greeting} />
-      <h1>{greeting}</h1>
-    </div>
+    <h1>
+      {greeting}
+    </h1>
   );
 }
 
