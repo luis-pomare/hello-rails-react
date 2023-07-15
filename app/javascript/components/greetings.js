@@ -19,7 +19,7 @@ function Greetings() {
 
   return (
     <h1>
-      {greeting}
+      {greeting}!
     </h1>
   );
 }
